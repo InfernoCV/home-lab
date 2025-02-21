@@ -5,20 +5,19 @@ metadata:
   labels:
     app: mealie
   name: mealie
+  namespace: mealie
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: mealie
-  strategy: {}
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: mealie
     spec:
       containers:
-      - image: nginx
-        name: nginx
-        resources: {}
-status: {}
+        - image: ghcr.io/mealie-recipes/mealie:v2.5.0 
+          name: mealie
+          ports:
+            - containerPort: 9000
