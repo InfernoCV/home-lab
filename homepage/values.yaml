@@ -12,7 +12,7 @@ config:
 
     - My Second Group:
         - My Second Service:
-            href: http://localhost/
+            href: http://localhost:9000/
             description: Homepage is the best
 
     - My Third Group:
@@ -34,7 +34,7 @@ config:
           memory: true
           showLabel: true
     - search:
-        provider: duckduckgo
+        provider: google
         target: _blank
   kubernetes:
     mode: cluster
@@ -59,7 +59,7 @@ ingress:
       gethomepage.dev/group: "Dynamic"
       gethomepage.dev/icon: "homepage.png"
     hosts:
-      - host: homepage.example.com
+      - host: homepage.infernocv.org
         paths:
           - path: /
             pathType: Prefix
